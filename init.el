@@ -4,6 +4,7 @@
 
 ;; Define package repositories
 (require 'package)
+
 ;;(add-to-list 'package-archives
 ;;             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 ;;(add-to-list 'package-archives
@@ -60,13 +61,24 @@
 
     ;; project navigation
     projectile
+    ggtags
 
     ;; colorful parenthesis matching
     rainbow-delimiters
 
     ;; edit html tags like sexps
     tagedit
+    web-beautify
+    web-mode
 
+    ;; auto complete support
+    auto-complete
+    ac-etags
+
+    ;;language suuport
+    js2-mode
+    json-mode
+    
     ;; git integration
     magit))
 
@@ -84,7 +96,6 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
-
 
 ;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
 ;; to load them.

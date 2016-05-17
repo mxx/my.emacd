@@ -70,3 +70,26 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+
+;;web beautify
+;;(require 'auto-complete)
+
+(eval-after-load 'js2-mode
+      '(define-key js2-mode-map (kbd "C-c b") 'web-beautify-js))
+(eval-after-load 'json-mode
+      '(define-key json-mode-map (kbd "C-c b") 'web-beautify-js))
+(eval-after-load 'sgml-mode
+      '(define-key html-mode-map (kbd "C-c b") 'web-beautify-html))
+(eval-after-load 'css-mode
+      '(define-key css-mode-map (kbd "C-c b") 'web-beautify-css))
+
+;;(add-to-list 'web-mode-ac-sources-alist
+;;             '("html" . (
+                         ;; attribute-value better to be first
+;;                         ac-source-html-attribute-value
+;;                         ac-source-html-tag
+;;                         ac-source-html-attribute)))
+
+(add-hook 'html-mode-hook 'ac-html-enable)
+
