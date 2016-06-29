@@ -48,7 +48,7 @@
     ;; integration with a Clojure REPL
     ;; https://github.com/clojure-emacs/cider
     cider
-
+    ac-cider
     ;; allow ido usage in as many contexts as possible. see
     ;; customizations/navigation.el line 23 for a description
     ;; of ido
@@ -70,11 +70,14 @@
     tagedit
     web-beautify
     web-mode
-
+    auto-indent-mode
     ;; auto complete support
     auto-complete
     ac-etags
-
+    ;;C/C++ auto comlete
+    company
+    company-irony
+    ;;company-c-headers
     ;;language suuport
     js2-mode
     json-mode

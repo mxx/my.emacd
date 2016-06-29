@@ -93,3 +93,5 @@
 
 (add-hook 'html-mode-hook 'ac-html-enable)
 
+(eval-after-load 'company
+      '(add-to-list 'company-backends 'company-irony))
