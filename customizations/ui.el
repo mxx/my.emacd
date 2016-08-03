@@ -29,7 +29,11 @@
 (load-theme 'tomorrow-night-bright t)
 
 ;; increase font size for better readability
-(set-face-attribute 'default nil :height 140)
+;;(set-default-font "Courier New-12")
+;;(set-default-font "DejaVu Sans Mono 12")
+;;(set-default-font "Inconsolata-12")
+;;(set-default-font "monaco-10")
+;;(set-face-attribute 'default nil :height 110)
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
