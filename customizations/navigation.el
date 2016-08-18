@@ -15,6 +15,8 @@
 (require 'window-numbering)
 (window-numbering-mode 1)
 
+(require 'sr-speedbar)
+
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
