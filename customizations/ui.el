@@ -32,7 +32,12 @@
 ;;(set-default-font "Courier New-14")
 ;;(set-default-font "DejaVu Sans Mono 12")
 (set-default-font "Inconsolata-12")
-;;(set-default-font "monaco-14")
+(if (eq system-type 'darwin)
+  ; something for OS X if true
+  ; optional something if not
+    (set-default-font "Inconsolata-16")
+)
+;(set-default-font "monaco-16")
 ;;(set-face-attribute 'default nil :height 180)
 
 ;; Uncomment the lines below by removing semicolons and play with the
