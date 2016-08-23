@@ -31,7 +31,7 @@
 ;; increase font size for better readability
 ;;(set-default-font "Courier New-14")
 ;;(set-default-font "DejaVu Sans Mono 12")
-(set-default-font "Inconsolata-16")
+(set-default-font "Inconsolata-12")
 ;;(set-default-font "monaco-14")
 ;;(set-face-attribute 'default nil :height 180)
 
