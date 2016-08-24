@@ -70,7 +70,7 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
-
+(auto-indent-global-mode)
 
 ;;web beautify
 ;;(require 'auto-complete)

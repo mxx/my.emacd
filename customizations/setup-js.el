@@ -21,8 +21,8 @@
 (custom-set-variables
  '(coffee-tab-width 2))
 
-(defun figwheel-repl ()
-  (interactive)
-  (run-clojure "lein figwheel"))
+;; (defun figwheel-repl ()
+;;   (interactive)
+;;   (run-clojure "lein figwheel"))
 
 (add-hook 'clojure-mode-hook #'inf-clojure-minor-mode)
