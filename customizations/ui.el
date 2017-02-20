@@ -9,7 +9,7 @@
 (tool-bar-mode -1)
 ;; Show line numbers
 (global-linum-mode)
-
+(setq column-number-mode t)
 ;; You can uncomment this to remove the graphical toolbar at the top. After
 ;; awhile, you won't need the toolbar.
 ;; (when (fboundp 'tool-bar-mode)
@@ -26,7 +26,8 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'tomorrow-night-eighties t)
+
+;;(load-theme 'tomorrow-night-eighties t)
 
 ;; increase font size for better readability
 ;;(set-default-font "Courier New-14")
