@@ -1,4 +1,7 @@
 ;; Customizations relating to editing a buffer.
+(require 'chinese-pyim)
+(require 'chinese-pyim-basedict)
+(chinese-pyim-basedict-enable)
 
 ;; Key binding to use "hippie expand" for text autocompletion
 ;; http://www.emacswiki.org/emacs/HippieExpand
