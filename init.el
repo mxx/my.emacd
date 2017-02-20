@@ -82,7 +82,11 @@
     ;;language suuport
     js2-mode
     json-mode
-    
+    ;;chinese input method
+    chinese-pyim
+    chinese-pyim-basedict
+    ;;theme
+    material-theme
     ;; git integration
     magit))
 
