@@ -15,8 +15,9 @@
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
 ;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
+
 (add-to-list 'package-archives  
-             '("melpa" . "http://stable.melpa.org/packages/") t)  
+             '("melpa" . "http://melpa.org/packages/") t)  
 
 
 ;; Load and activate emacs packages. Do this first so that the
@@ -42,18 +43,18 @@
     ;; key bindings and code colorization for Clojure
     ;; https://github.com/clojure-emacs/clojure-mode
     clojure-mode
-    inf-clojure
+    ;; inf-clojure
     ;; extra syntax highlighting for clojure
     clojure-mode-extra-font-locking
 
     ;; integration with a Clojure REPL
     ;; https://github.com/clojure-emacs/cider
     cider
-    ac-cider
+    company
     ;; allow ido usage in as many contexts as possible. see
     ;; customizations/navigation.el line 23 for a description
     ;; of ido
-    ido-ubiquitous
+    ;;ido-ubiquitous
 
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer
@@ -68,13 +69,13 @@
     rainbow-delimiters
 
     ;; edit html tags like sexps
-    tagedit
-    web-beautify
-    web-mode
-    auto-indent-mode
+    ;;tagedit
+    ;;web-beautify
+    ;;web-mode
+    ;;auto-indent-mode
     ;; auto complete support
     auto-complete
-    ac-etags
+    ;;ac-etags
     ;;C/C++ auto comlete
     company
     company-irony
@@ -83,16 +84,17 @@
     js2-mode
     json-mode
     ;;python IDE
-    elpy
+    ;;elpy
     ;;
     flycheck
     ;;chinese input method
-    chinese-pyim
-    chinese-pyim-basedict
+    ;;chinese-pyim
+    ;;chinese-pyim-basedict
     ;;theme
-    material-theme
+    ;;material-theme
     ;; git integration
-    magit))
+    ;;magit
+    ))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -155,7 +157,9 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
-(elpy-enable)
+
+
+ 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -164,8 +168,10 @@
  '(coffee-tab-width 2)
  '(custom-safe-themes
    (quote
-    ("98cc377af705c0f2133bb6d340bf0becd08944a588804ee655809da5d8140de6" "5dc0ae2d193460de979a463b907b4b2c6d2c9c4657b2e9e66b8898d2592e3de5" "7f1263c969f04a8e58f9441f4ba4d7fb1302243355cb9faecb55aec878a06ee9" "ed4b75a4f5cf9b1cd14133e82ce727166a629f5a038ac8d91b062890bc0e2d1b" "9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" "cf08ae4c26cacce2eebff39d129ea0a21c9d7bf70ea9b945588c1c66392578d1" "5ee12d8250b0952deefc88814cf0672327d7ee70b16344372db9460e9a0e3ffc" "1157a4055504672be1df1232bed784ba575c60ab44d8e6c7b3800ae76b42f8bd" "52588047a0fe3727e3cd8a90e76d7f078c9bd62c0b246324e557dfa5112e0d0c" default)))
- '(default-input-method "chinese-pyim"))
+    ("38908037082b9fc2e6762961026299d026963e57c726c3bc0b9e66cd0def0926" "21fb497b14820147b2b214e640b3c5ee19fcadc15bc288e3c16c9c9575d95d66" default)))
+ '(package-selected-packages
+   (quote
+    (py-autopep8 anaconda-mode markdown-preview-mode markdown-mode+ markdown-mode clojure-mode cider eink-theme eide magit auto-indent-mode window-numbering smex rainbow-delimiters projectile paredit json-mode js2-mode inf-clojure helm-cider ggtags flycheck company-irony clojure-mode-extra-font-locking cider-hydra))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

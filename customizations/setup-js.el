@@ -25,4 +25,4 @@
 ;;   (interactive)
 ;;   (run-clojure "lein figwheel"))
 
-(add-hook 'clojure-mode-hook #'inf-clojure-minor-mode)
+

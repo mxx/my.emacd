@@ -1,12 +1,13 @@
 ;; Customizations relating to editing a buffer.
-(require 'chinese-pyim)
-(require 'chinese-pyim-basedict)
-(chinese-pyim-basedict-enable)
+;;(require 'chinese-pyim)
+;;(require 'chinese-pyim-basedict)
+;;(chinese-pyim-basedict-enable)
 
 ;; Key binding to use "hippie expand" for text autocompletion
 ;; http://www.emacswiki.org/emacs/HippieExpand
 (global-set-key (kbd "M-/") 'hippie-expand)
-
+(global-company-mode)
+(auto-indent-global-mode)
 ;; Lisp-friendly hippie expand
 (setq hippie-expand-try-functions-list
       '(try-expand-dabbrev
@@ -60,7 +61,7 @@
 ;; use 2 spaces for tabs
 (defun die-tabs ()
   (interactive)
-  (set-variable 'tab-width 2)
+  (set-variable 'tab-width 4)
   (mark-whole-buffer)
   (untabify (region-beginning) (region-end))
   (keyboard-quit))
@@ -73,7 +74,7 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
-(auto-indent-global-mode)
+
 
 ;;web beautify
 ;;(require 'auto-complete)
@@ -94,8 +95,17 @@
 ;;                         ac-source-html-tag
 ;;                         ac-source-html-attribute)))
 
-(add-hook 'html-mode-hook 'ac-html-enable)
+;;(add-hook 'html-mode-hook 'ac-html-enable)
 
 (eval-after-load 'company
       '(add-to-list 'company-backends 'company-irony))
 
+(defun astyle-this-buffer (pmin pmax)
+  (interactive "r")
+  (shell-command-on-region pmin pmax
+                           "astyle"  "--style=allman" "-s4" "--max-code-length=100";; add options here...
+                           (current-buffer) t 
+                           (get-buffer-create "*Astyle Errors*") t))
+
+(setq c-default-style "bsd"
+      c-basic-offset 4)
