@@ -5,20 +5,13 @@
 ;; Define package repositories
 (require 'package)
 
-;;(add-to-list 'package-archives
-;;             '("marmalade" . "http://marmalade-repo.org/packages/") t)
-;;(add-to-list 'package-archives
-;;             '("tromey" . "http://tromey.com/elpa/") t)
-;;(add-to-list 'package-archives
-;;             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;(setq package-check-signature nil)
+;(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+;                         ("melpa" . "https://melpa.org/packages/")))
 
-;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
-;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
-
-(add-to-list 'package-archives  
-             '("melpa" . "http://melpa.org/packages/") t)  
-
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
+      
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -94,6 +87,7 @@
     ;;material-theme
     ;; git integration
     ;;magit
+    julia-mode
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -158,23 +152,6 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 
-
+(require 'julia-mode)
  
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(coffee-tab-width 2)
- '(custom-safe-themes
-   (quote
-    ("38908037082b9fc2e6762961026299d026963e57c726c3bc0b9e66cd0def0926" "21fb497b14820147b2b214e640b3c5ee19fcadc15bc288e3c16c9c9575d95d66" default)))
- '(package-selected-packages
-   (quote
-    (py-autopep8 anaconda-mode markdown-preview-mode markdown-mode+ markdown-mode clojure-mode cider eink-theme eide magit auto-indent-mode window-numbering smex rainbow-delimiters projectile paredit json-mode js2-mode inf-clojure helm-cider ggtags flycheck company-irony clojure-mode-extra-font-locking cider-hydra))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
